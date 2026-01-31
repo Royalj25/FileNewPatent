@@ -2,13 +2,13 @@ import java.util.Locale;
 import java.util.Scanner;
 
 /**
- * HW-03 -- FileNewPatent
+ * FileNewPatent
  * <p>
  * This program takes in input from System.in
  * performs string manipulation and returns a user String
  *
- * @author Jaiah Royal, L19
- * @version Jan 9, 2026
+ * @author Jaiah Royal
+ * @version Jan 31, 2026
  */
 
 public class FileNewPatent {
@@ -88,7 +88,6 @@ public class FileNewPatent {
         String institution = scan.nextLine().toUpperCase();
         String institution2 = institution.substring(0, 2);
         String patentString1 = institution2 + patentString;
-        //System.out.println(patentString1);
     
         //institution state
         System.out.println(PROMPT_SIX);
@@ -126,9 +125,7 @@ public class FileNewPatent {
         } else if (zipCode.length() == 1) {
             zipCode = "00" + divide;
         }
-        
-        patentString2 = zipCode + patentString1 + stateOI;
-        // System.out.println(patenString2);
+        patentString2 = zipCode + patentString1 + stateOI; // combines progress so far
         
         
         //ACME item number
@@ -138,9 +135,8 @@ public class FileNewPatent {
         int hyphen = acme.indexOf("-");
         String item = acme.substring(hyphen);
         String patentNumber = patentString2 + item + "-";
-        //System.out.println(patentNumber);
         
-        //Step 9
+        //Step 9 (take length of inputs and add them together)
         int name1 = patentName.length();
         int type = patentType.length();
         int money = cost.length();
@@ -153,21 +149,17 @@ public class FileNewPatent {
         int total2 = place + place2 + number1 + number2;
         int total = total1 + total2;
         String total3 = "" + total;
-        String result = patentNumber + total3;
-       // System.out.println(total1 + total2);
-        //System.out.println(result);
+        String result = patentNumber + total3; //concatenate to string
         
         
-        //step 10
+        //step 10 (remove any instances of "o" and "i", ignore case)
         result = result.replace("O", "0");
         result = result.replace("o", "0");
         result = result.replace("I", "1");
         result = result.replace("i", "1");
-        
-        
+
         //output message
         System.out.println(OUTPUT + result);
-        
 
     } 
 } 
