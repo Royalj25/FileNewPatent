@@ -1,12 +1,12 @@
-#🧵 FileNewPatent
+# 🧵 FileNewPatent
 
 This program generates a unique Patent String for the ACME Corporation based on user input. It collects information about a patent, its inventor, and the associated institution, then performs a series of string manipulations and numeric operations to create a coded identifier that fits ACME's filing system.
 
 ---
 
 ## 📂 Files
-- `FileNewPatent.java` — main source code file containing the program logic.  
-- `SampleOutput.md` — demonstrates example runs of the program with sample inputs and expected output.
+- [`FileNewPatent.java`](./FileNewPatent.java) — main source code file containing the program logic.  
+- [`SampleOutput.md`](./SampleOutput.md)— demonstrates example runs of the program with sample inputs and expected output.
 
 ---
 
